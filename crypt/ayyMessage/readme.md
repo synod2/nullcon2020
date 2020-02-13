@@ -92,3 +92,22 @@ def sign_message(message,text):
 최종적으로, 기존에 만들어져 있던 message 문자열을 하나식 잘라 보내고
 잘라 보낸 message의 복호화-해쉬 결과가 아스키 범위 내에서 어떤 문자열의 해쉬와 일치하는지를 비교하여
 평문을 하나씩 찾아내면 된다. 
+```
+	for i in range(len(message["message"])) : 
+		p = remote("crypto1.ctf.nullcon.net",5001)
+		
+		sendmsg = message["message"][0:1+i]
+		message = sign_message(message,sendmsg)
+		
+		p.sendlineafter("format: ",message)
+		p.recvuntil("receipt:")
+	    hm = p.recvline.decode()
+	    
+	    for ch in printable:
+	        ch = ch.encode()
+	        if hm == SHA256.new(flag + ch).hexdigest():
+	            flag += ch
+	            continue
+	            
+	print(flag)
+```
