@@ -56,20 +56,19 @@ signed __int64 *__fastcall xor_f(signed __int64 *a1, __int64 a2)
 
 
 ```
-
 for ( i = 0; i <= 9; ++i )
   {
     v4 = calc(&xor_res);
     dword_6010A0[i] = v4;
   }
------
+  
+----------------------------------
+
 __int64 __fastcall calc(_QWORD *a1)
 {
   *a1 = 5DEECE66DLL * *a1 + 11;
   return *a1 >> 16;
 }
-
-  
 ```
 
 이후 배열에 저장된 내용을 출력하는데, 
