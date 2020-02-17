@@ -9,7 +9,8 @@ desc
 
 files 
 ---------------
--main -libc.so.6(glibc 2.27)
+-main 
+-libc.so.6(glibc 2.27->ubuntu 18.04)
 
 
 checksec 
