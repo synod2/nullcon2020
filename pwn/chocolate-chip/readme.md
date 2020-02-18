@@ -6,8 +6,9 @@ desc
 ---------------
 ```
 ```
-using Z3 solve 
-GOT overwrite
+- using Z3 solve 
+- GOT overwrite
+
 files 
 ---------------
 -main 
