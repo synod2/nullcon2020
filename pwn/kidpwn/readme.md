@@ -13,8 +13,8 @@ desc
 
 files 
 ---------------
--challenge 
--libc.so.6(glibc 2.23->ubuntu 16.04)
+- challenge 
+- libc.so.6(glibc 2.23->ubuntu 16.04)
 
 
 checksec 
